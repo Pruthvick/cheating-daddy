@@ -1,7 +1,6 @@
 <!doctype html>
 <html>
     <head>
-        <meta http-equiv="content-security-policy" content="script-src 'self' 'unsafe-inline'" />
         <title>Screen and Audio Capture</title>
         <style>
             :root {
@@ -100,13 +99,23 @@
         </style>
     </head>
     <body>
-        <script src="assets/marked-4.3.0.min.js"></script>
-        <script src="assets/highlight-11.9.0.min.js"></script>
-        <link rel="stylesheet" href="assets/highlight-vscode-dark.min.css" />
-        <script type="module" src="components/app/CheatingDaddyApp.js"></script>
+    
+    <!-- React & ReactDOM from CDN (recommended for Electron without bundler) -->
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
 
-        <cheating-daddy-app id="cheddar"></cheating-daddy-app>
-        <script src="script.js"></script>
-        <script src="utils/renderer.js"></script>
+    <script src="assets/marked-4.3.0.min.js"></script>
+    <script src="assets/highlight-11.9.0.min.js"></script>
+    <link rel="stylesheet" href="assets/highlight-vscode-dark.min.css" />
+
+    <div id="root"></div>
+
+    <script type="module" src="./react/main.js"></script>
+
+    <script src="utils/renderer.js"></script>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+
     </body>
 </html>
